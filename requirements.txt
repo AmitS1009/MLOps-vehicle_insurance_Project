@@ -4,6 +4,7 @@ numpy
 matplotlib
 plotly
 seaborn
+imblearn
 scikit-learn
 pymongo
 from-root

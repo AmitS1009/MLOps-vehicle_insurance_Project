@@ -211,3 +211,6 @@ crashcourse.txt
 .env
 
 artifacts/
+
+test.ipynb
+test2.ipynb

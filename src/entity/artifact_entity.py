@@ -36,3 +36,16 @@ class ClassificationMetricArtifact:
 class ModelTrainerArtifact:
     trained_model_file_path:str 
     metric_artifact:ClassificationMetricArtifact
+
+
+@dataclass
+class ModelEvaluationArtifact:
+    is_model_accepted:bool
+    changed_accuracy:float
+    azure_model_path:str 
+    trained_model_path:str
+
+@dataclass
+class ModelPusherArtifact:
+    bucket_name:str
+    azure_model_path:str

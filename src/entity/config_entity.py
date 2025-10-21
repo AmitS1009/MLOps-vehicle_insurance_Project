@@ -55,3 +55,17 @@ class ModelTrainerConfig:
     _max_depth = MIN_SAMPLES_SPLIT_MAX_DEPTH
     _criterion = MIN_SAMPLES_SPLIT_CRITERION
     _random_state = MIN_SAMPLES_SPLIT_RANDOM_STATE
+
+
+
+@dataclass
+class ModelEvaluationConfig:
+    changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
+    container_name: str = MODEL_CONTAINER_NAME       # Renamed from bucket_name
+    azure_model_blob_path: str = MODEL_FILE_NAME     # Renamed from azure_model_key_path
+
+@dataclass
+class ModelPusherConfig:
+    container_name: str = MODEL_CONTAINER_NAME
+    azure_model_blob_path: str = MODEL_FILE_NAME
+

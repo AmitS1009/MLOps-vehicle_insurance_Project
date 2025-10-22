@@ -25,7 +25,7 @@ class AzureBlobService:
         """
         try:
             if connection_string is None:
-                connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
+                connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING") or os.getenv("AZURE_CONNECTION_STRING")
                 if not connection_string:
                     raise ValueError("Azure connection string not found in environment variables.")
             self.blob_service_client = BlobServiceClient.from_connection_string(connection_string)

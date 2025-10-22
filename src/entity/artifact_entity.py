@@ -49,3 +49,5 @@ class ModelEvaluationArtifact:
 class ModelPusherArtifact:
     bucket_name:str
     azure_model_path:str
+
+
